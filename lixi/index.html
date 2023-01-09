@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1.css">
+    <title>Document</title>
+    
+    <script>
+        
+        function display__img1(){
+            let holder = document.getElementById('holder1')
+            let h1 = document.getElementById('holder1')
+            let a = Math.floor(Math.random()*100) + 1;
+            if( a % 2 == 1){
+                holder.innerHTML='<img class ="img" src="20k.jfif">'
+                setTimeout(congratulation20,2000);
+                setTimeout(playaudio,700);
+                chucmung();   
+
+            }else {
+                holder.innerHTML='<img class ="img" src="50k.jpg">'
+                setTimeout(congratulation50,2000);
+                setTimeout(playaudio,700);
+                chucmung();           
+            }
+        }
+        function display__img2(){
+            let holder = document.getElementById('holder2')
+            let h1 = document.getElementById('holder2')
+            let a = Math.floor(Math.random()*100) + 1;
+            if( a % 2 == 1){
+                holder.innerHTML='<img class ="img" src="20k.jfif">'
+                setTimeout(congratulation20,2000);
+                setTimeout(playaudio,700);
+                chucmung();   
+
+            }else {
+                holder.innerHTML='<img class ="img" src="50k.jpg">'
+                setTimeout(congratulation50,2000);
+                setTimeout(playaudio,700);
+                chucmung();           
+            }
+        }
+        function display__chucmung(){
+            let h2 = document.getElementById('demo');
+            h2.innerHTML='<div class="Chucmung"></div>'
+        }
+        function congratulation20()
+        {
+            alert("Chúc mừng bạn đã được lì xì 20 k");
+        
+        }
+        function congratulation50()
+        {
+            alert(`Chúc mừng bạn đã được lì xì 50 k`);
+        
+        }
+          function playaudio() {
+              myMusic.play();
+          }
+    </script>
+     
+    
+</head>
+<body>
+    <audio id="myMusic" >
+       <source src="tieng_vo_tay.mp3">
+    </audio>
+    
+    <!-- <div class="moon"></div> -->
+    <div class="pyro"><div class="before"></div><div class="after"></div></div>
+    
+    <div class="lucky_money1">
+         <div class="head__lixi">
+            <div id ="holder1"> </div>
+            <button onclick="display__img1()" class="button" id ="bt" ></button>
+            <audio autoplay></audio>
+            
+    
+        
+         </div>
+         <div class="body__lixi">
+         </div>
+    </div>
+    <p id="demo"></p>
+    <div class="lucky_money2">
+        <div class="head__lixi">
+           <div id ="holder2"> </div>
+           <button onclick="display__img2()" class="button"></button>
+           <audio autoplay></audio>
+   
+       
+        </div>
+        <div class="body__lixi">
+        </div>
+   </div>
+   <!-- //<div class="Chucmung" id ="loichuc">  -->
+    <!-- <h1 id="title">CHÚC MỪNG NĂM MỚI</h1>
+    <h3 id="content">CHÚC BẠN VÀ GIA ĐÌNH DỒI DÀO SỨC KHỎE</h3> -->
+    <!-- </div> -->
+    
+
+    
+</body>
+</html>
